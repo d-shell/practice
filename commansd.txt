@@ -1,0 +1,995 @@
+Microsoft Windows [Version 10.0.22621.2134]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\javaprog>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 28BE-1CE5
+
+ Directory of C:\javaprog
+
+19-09-2023  11:24    <DIR>          .
+19-09-2023  11:27                11 java1.java
+               1 File(s)             11 bytes
+               1 Dir(s)  130,153,992,192 bytes free
+
+C:\javaprog>dir /a:h
+ Volume in drive C is Windows
+ Volume Serial Number is 28BE-1CE5
+
+ Directory of C:\javaprog
+
+14-09-2023  13:21    <DIR>          ..
+19-09-2023  11:30    <DIR>          .git
+               0 File(s)              0 bytes
+               2 Dir(s)  130,153,996,288 bytes free
+
+C:\javaprog>cd .git
+
+C:\javaprog\.git>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 28BE-1CE5
+
+ Directory of C:\javaprog\.git
+
+19-09-2023  11:24    <DIR>          ..
+12-09-2023  12:33                78 1st.txt
+15-09-2023  12:43               119 array.java
+14-09-2023  12:44                33 basic.java
+12-09-2023  12:25                78 class A.txt
+19-09-2023  11:30                 4 COMMIT_EDITMSG
+19-09-2023  11:24               130 config
+12-09-2023  12:05                73 description
+12-09-2023  12:05                23 HEAD
+12-09-2023  12:05    <DIR>          hooks
+19-09-2023  11:30               145 index
+12-09-2023  12:05    <DIR>          info
+19-09-2023  11:28    <DIR>          logs
+19-09-2023  11:30    <DIR>          objects
+12-09-2023  12:05    <DIR>          refs
+               9 File(s)            683 bytes
+               6 Dir(s)  130,153,996,288 bytes free
+
+C:\javaprog\.git>cd ..
+
+C:\javaprog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\javaprog>git log
+commit 7558ea6a36b24039134b55b36e8200ecf4c85dec (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:30:07 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git reset 05203c386443c4491becfd7f54f1829f4c58cf90
+Unstaged changes after reset:
+M       java1.java
+
+C:\javaprog>rm .git
+'rm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\javaprog>rmdir .gt
+The system cannot find the file specified.
+
+C:\javaprog>rmdir .giit
+The system cannot find the file specified.
+
+C:\javaprog>rmdir .git
+The directory is not empty.
+
+C:\javaprog>dir /a:h
+ Volume in drive C is Windows
+ Volume Serial Number is 28BE-1CE5
+
+ Directory of C:\javaprog
+
+14-09-2023  13:21    <DIR>          ..
+19-09-2023  12:13    <DIR>          .git
+               0 File(s)              0 bytes
+               2 Dir(s)  130,131,296,256 bytes free
+
+C:\javaprog>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 28BE-1CE5
+
+ Directory of C:\javaprog
+
+19-09-2023  11:24    <DIR>          .
+19-09-2023  12:14               118 java1.java
+               1 File(s)            118 bytes
+               1 Dir(s)  130,131,296,256 bytes free
+
+C:\javaprog>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog>git add java1.java
+
+C:\javaprog>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   java1.java
+
+
+C:\javaprog>git restore java1.java
+
+C:\javaprog>git restore --staged java1.java
+
+C:\javaprog>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog>git add java1.java
+
+C:\javaprog>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   java1.java
+
+
+C:\javaprog>java commit -m "java1 is modified"
+Error: Could not find or load main class commit
+Caused by: java.lang.ClassNotFoundException: commit
+
+C:\javaprog>git commit -m "java1 is modified"
+[master 913a1fd] java1 is modified
+ 1 file changed, 7 insertions(+)
+
+C:\javaprog>git log
+commit 913a1fd019036b3d67c5fdd7d2baabc6933eda02 (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:20:24 2023 +0530
+
+    java1 is modified
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git reset  -h
+usage: git reset [--mixed | --soft | --hard | --merge | --keep] [-q] [<commit>]
+   or: git reset [-q] [<tree-ish>] [--] <pathspec>...
+   or: git reset [-q] [--pathspec-from-file [--pathspec-file-nul]] [<tree-ish>]
+   or: git reset --patch [<tree-ish>] [--] [<pathspec>...]
+   or: DEPRECATED: git reset [-q] [--stdin [-z]] [<tree-ish>]
+
+    -q, --quiet           be quiet, only report errors
+    --no-refresh          skip refreshing the index after reset
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --hard                reset HEAD, index and working tree
+    --merge               reset HEAD, index and working tree
+    --keep                reset HEAD but keep local changes
+    --recurse-submodules[=<reset>]
+                          control recursive updating of submodules
+    -p, --patch           select hunks interactively
+    -N, --intent-to-add   record only the fact that removed paths will be added later
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+    -z                    DEPRECATED (use --pathspec-file-nul instead): paths are separated with NUL character
+    --stdin               DEPRECATED (use --pathspec-from-file=- instead): read paths from <stdin>
+
+
+C:\javaprog>git reset --hard java1.java
+fatal: Cannot do hard reset with paths.
+
+C:\javaprog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\javaprog>git log
+commit 913a1fd019036b3d67c5fdd7d2baabc6933eda02 (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:20:24 2023 +0530
+
+    java1 is modified
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git reset --hard 05203c386443c4491becfd7f54f1829f4c58cf90
+HEAD is now at 05203c3 try
+
+C:\javaprog>git log
+commit 05203c386443c4491becfd7f54f1829f4c58cf90 (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\javaprog>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog> git add java1.java
+
+C:\javaprog>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   java1.java
+
+
+C:\javaprog>git commit -m "try"
+[master 77663ed] try
+ 1 file changed, 7 insertions(+)
+
+C:\javaprog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\javaprog>git log
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5 (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git commit
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog>git add java1.java
+
+C:\javaprog>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   java1.java
+
+
+C:\javaprog>git commit -m"done"
+[master 1137e6e] done
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\javaprog>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   java1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\javaprog>git add java1.java
+
+C:\javaprog>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   java1.java
+
+
+C:\javaprog>git commit -m"delete"
+[master 3cfdfe1] delete
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\javaprog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\javaprog>git log
+commit 3cfdfe130ea7d7ad49b271577fb6b562a01803ac (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:29:45 2023 +0530
+
+    delete
+
+commit 1137e6e40d220a34d809f79f0043dcd4c36e4969
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:28:06 2023 +0530
+
+    done
+
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+:
+commit 3cfdfe130ea7d7ad49b271577fb6b562a01803ac (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:29:45 2023 +0530
+
+    delete
+
+commit 1137e6e40d220a34d809f79f0043dcd4c36e4969
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:28:06 2023 +0530
+
+    done
+
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+...skipping...
+commit 3cfdfe130ea7d7ad49b271577fb6b562a01803ac (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:29:45 2023 +0530
+
+    delete
+
+commit 1137e6e40d220a34d809f79f0043dcd4c36e4969
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:28:06 2023 +0530
+
+    done
+
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git reset --soft 1137e6e40d220a34d809f79f0043dcd4c36e4969
+
+C:\javaprog>git log
+commit 1137e6e40d220a34d809f79f0043dcd4c36e4969 (HEAD -> master)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:28:06 2023 +0530
+
+    done
+
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git reset --hard 1137e6e40d220a34d809f79f0043dcd4c36e4969
+HEAD is now at 1137e6e done
+
+C:\javaprog>git reset -h
+usage: git reset [--mixed | --soft | --hard | --merge | --keep] [-q] [<commit>]
+   or: git reset [-q] [<tree-ish>] [--] <pathspec>...
+   or: git reset [-q] [--pathspec-from-file [--pathspec-file-nul]] [<tree-ish>]
+   or: git reset --patch [<tree-ish>] [--] [<pathspec>...]
+   or: DEPRECATED: git reset [-q] [--stdin [-z]] [<tree-ish>]
+
+    -q, --quiet           be quiet, only report errors
+    --no-refresh          skip refreshing the index after reset
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --hard                reset HEAD, index and working tree
+    --merge               reset HEAD, index and working tree
+    --keep                reset HEAD but keep local changes
+    --recurse-submodules[=<reset>]
+                          control recursive updating of submodules
+    -p, --patch           select hunks interactively
+    -N, --intent-to-add   record only the fact that removed paths will be added later
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+    -z                    DEPRECATED (use --pathspec-file-nul instead): paths are separated with NUL character
+    --stdin               DEPRECATED (use --pathspec-from-file=- instead): read paths from <stdin>
+
+
+C:\javaprog> git branch
+* master
+
+C:\javaprog>git branch -M main
+
+C:\javaprog>git branch
+* main
+
+C:\javaprog>git remote add origin https://github.com/Akanksha7083/sailisha-programs
+
+C:\javaprog>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor=notepad
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.editor=code
+user.name=sailisha
+user.email=popshelly886@gmail.com
+user.mail=popshelly886@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/Akanksha7083/sailisha-programs
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+C:\javaprog>git push -h
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+C:\javaprog>git push -u origin main
+remote: Permission to Akanksha7083/sailisha-programs.git denied to gaurav5627.
+fatal: unable to access 'https://github.com/Akanksha7083/sailisha-programs/': The requested URL returned error: 403
+
+C:\javaprog>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor=notepad
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.editor=code
+user.name=sailisha
+user.email=popshelly886@gmail.com
+user.mail=popshelly886@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/Akanksha7083/sailisha-programs
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+C:\javaprog>git push -u origin main
+remote: Permission to Akanksha7083/sailisha-programs.git denied to gaurav5627.
+fatal: unable to access 'https://github.com/Akanksha7083/sailisha-programs/': The requested URL returned error: 403
+
+C:\javaprog>git config --global -h
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\javaprog>git config --global --list
+core.editor=code
+user.name=sailisha
+user.email=popshelly886@gmail.com
+user.mail=popshelly886@gmail.com
+
+C:\javaprog>whoami
+desktop-7vkjm89\pc10
+
+C:\javaprog>which
+'which' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\javaprog>which
+'which' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\javaprog>whoami
+desktop-7vkjm89\pc10
+
+C:\javaprog>git push -u origin main
+remote: Permission to Akanksha7083/sailisha-programs.git denied to gaurav5627.
+fatal: unable to access 'https://github.com/Akanksha7083/sailisha-programs/': The requested URL returned error: 403
+
+C:\javaprog>git config --global --unset-all
+error: wrong number of arguments, should be from 1 to 2
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\javaprog>git config --global --unset-all user.mail
+
+C:\javaprog>git config --global --list
+core.editor=code
+user.name=sailisha
+user.email=popshelly886@gmail.com
+
+C:\javaprog>git config --global --unset-all user.email user.name
+
+C:\javaprog>git config --global --list
+core.editor=code
+user.name=sailisha
+user.email=popshelly886@gmail.com
+
+C:\javaprog>git config --global --unset-all user.email
+
+C:\javaprog>git config --global --list
+core.editor=code
+user.name=sailisha
+
+C:\javaprog>git config --global --unset-all user.name
+
+C:\javaprog>git config --global --list
+core.editor=code
+
+C:\javaprog>git config user.name sailisha
+
+C:\javaprog>git config user.name
+sailisha
+
+C:\javaprog>git config user.email popshelly886@gmail.com
+
+C:\javaprog>git log
+commit 1137e6e40d220a34d809f79f0043dcd4c36e4969 (HEAD -> main)
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:28:06 2023 +0530
+
+    done
+
+commit 77663edd925c6c7891b02c49c8a50b308d8f10c5
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 12:25:40 2023 +0530
+
+    try
+
+commit 05203c386443c4491becfd7f54f1829f4c58cf90
+Author: sailisha <popshelly886@gmail.com>
+Date:   Tue Sep 19 11:28:09 2023 +0530
+
+    try
+
+C:\javaprog>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\javaprog>git checkout mai
+error: pathspec 'mai' did not match any file(s) known to git
+
+C:\javaprog>git checkout main
+Already on 'main'
+
+C:\javaprog>git remote add try https://github.com/d-shell/practice
+
+C:\javaprog>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor=notepad
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.editor=code
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/Akanksha7083/sailisha-programs
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.name=sailisha
+user.email=popshelly886@gmail.com
+remote.try.url=https://github.com/d-shell/practice
+remote.try.fetch=+refs/heads/*:refs/remotes/try/*
+
+C:\javaprog>git push -h
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+C:\javaprog>git push -u try main
+remote: Permission to d-shell/practice.git denied to gaurav5627.
+fatal: unable to access 'https://github.com/d-shell/practice/': The requested URL returned error: 403
+
+C:\javaprog>git push -u try main
+remote: Permission to d-shell/practice.git denied to gaurav5627.
+fatal: unable to access 'https://github.com/d-shell/practice/': The requested URL returned error: 403
+
+C:\javaprog>git remote set-url try https://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@github.com/d-shell/practice
+
+C:\javaprog>git push -u try main
+To https://github.com/d-shell/practice
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/d-shell/practice'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\javaprog>git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> main
+
+
+C:\javaprog>git pull try main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 593 bytes | 32.00 KiB/s, done.
+From https://github.com/d-shell/practice
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> try/main
+fatal: refusing to merge unrelated histories
+
+C:\javaprog>git stats
+git: 'stats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\javaprog>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\javaprog>git push -u try main
+To https://github.com/d-shell/practice
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/d-shell/practice'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\javaprog>git pull remote main
+fatal: 'remote' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\javaprog>git pull https://github.com/d-shell/practice main
+From https://github.com/d-shell/practice
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+C:\javaprog>git push -u try main
+To https://github.com/d-shell/practice
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/d-shell/practice'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\javaprog>git pull -h
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --recurse-submodules[=<on-demand>]
+                          control for recursive fetching of submodules
+
+Options related to merging
+    -r, --rebase[=(false|true|merges|interactive)]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --signoff[=...]       add a Signed-off-by trailer
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible    --verify              control use of pre-merge-commit and commit-msg hooks
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects    -p, --prune           prune remote-tracking branches no longer on remote
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --shallow-since <time>
+                          deepen history of shallow repository based on time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --deepen <n>          deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
+    --show-forced-updates
+                          check for forced-updates on all updated branches
+    --set-upstream        set upstream for git pull/fetch
+
+
+C:\javaprog>git pull --allow-unrelated-histories
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> main
+
+
+C:\javaprog>git pull try --allow-unrelated-histories main
+From https://github.com/d-shell/practice
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+C:\javaprog>git push -u try main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 1003 bytes | 1003.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/d-shell/practice
+   70bb579..3d2dea1  main -> main
+branch 'main' set up to track 'try/main'.
+
+C:\javaprog>
+
+
+
+
+
+
+
+
+
+
+
